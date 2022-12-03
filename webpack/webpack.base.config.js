@@ -1,6 +1,7 @@
 require("dotenv").config();
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const webpack = require("webpack");
@@ -68,11 +69,18 @@ module.exports = {
       allowEmptyValues: true,
       expand: true,
     }),
-    
+    new LiveReloadPlugin({
+      protocol: 'http',
+      port: 5000,
+      host:'localhost',
+      appendScriptTag:true,
+      useSourceHash: true,
+      delay:5000
+    })
   ],
   optimization: {
     
-    
+    runtimeChunk: 'single',
     minimize: true,
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
@@ -80,6 +88,6 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
   },
-  
+  watch: true
   
 };

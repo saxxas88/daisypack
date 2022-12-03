@@ -23,8 +23,8 @@ const Navbar = () => {
     <div className="drawer h-auto">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className=" flex flex-col">
-        <div className="w-full navbar bg-red-900 relative ">
-          <div className="lg:flex-1 px-2 mx-auto lg:mx-2">Navbar Title XYZ</div>
+        <div className="w-full navbar bg-base-900 relative ">
+          <div className="lg:flex-1 px-2 mx-auto lg:mx-2">Navbar</div>
           <div className="flex-none lg:hidden z-10 absolute right-0">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg

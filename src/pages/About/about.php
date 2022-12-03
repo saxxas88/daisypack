@@ -11,10 +11,9 @@
   <body>
   <?php 
    include './navbar.php'; 
-  include './homecontainer.php'; 
    
    ?>
-    
-    
+    <div id="about"></div>
+  
   </body>
 </html>

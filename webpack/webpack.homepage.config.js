@@ -4,6 +4,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpackBaseConfig = require("./webpack.base.config");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const mode = process.env.NODE_ENV;
 const PROJECT_ENTRY = process.env.PROJECT_ENTRY;
 const APP_FOLDER =
@@ -12,13 +13,10 @@ const APP_FOLDER =
     : process.env.BUILD_ENTRY;
 
 module.exports = merge(webpackBaseConfig,  {
-  
- 
   mode,
   target: "web",
   entry: {
-   // main: path.join(__dirname, "..", "src", "pages/Homepage/index.js"),
-   navbar: path.join(__dirname, "..", "src/components/Navbar/Navbar.js"),
+   //terzo: path.join(__dirname, "..", "src/components/Terzo/Terzo.js"),
     homecontainer: path.join(__dirname, "..", "src/components/HomeContainer/HomeContainer.js"),
     
   },
@@ -30,26 +28,26 @@ module.exports = merge(webpackBaseConfig,  {
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
-    /*new HtmlWebpackPlugin({
-      template: path.join(__dirname, "..", "src", "pages/Homepage/index.php"),
-      filename: "index.php",
+    /*
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "..", "src", "components/Terzo/Terzo.php"),
+      filename: "terzo.php",
       inject: true,
-      chunks: ['main']
+      chunks: ['terzo']
     }),
     */
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "..", "src", "components/Navbar/Navbar.php"),
-      filename: "navbar.php",
-      inject: true,
-      chunks: ['navbar']
-    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "..", "src", "components/HomeContainer/HomeContainer.php"),
       filename: "homecontainer.php",
       inject: true,
       chunks: ['homecontainer']
     }),
-    
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "..", "src", "pages/Homepage/index.php"),
+      filename: "index.php",
+      inject: false,
+      chunks: [null]
+    }),
     
     /*new CopyPlugin({
       patterns: [{ from: "public", to: "public" }],
@@ -57,31 +55,6 @@ module.exports = merge(webpackBaseConfig,  {
     
 
   ],
- /* devServer: {
 
-    host: "localhost",
-    port: Number(process.env.WEBPACK_PORT),
-    proxy: {
-      "*": {
-        target: `http://localhost/${PROJECT_ENTRY}/${APP_FOLDER}`,
-        changeOrigin: true,
-                secure: false
-      },
-    },
-    devMiddleware: {
-      writeToDisk: true,
-      serverSideRender: true,
-      index: false
-    },
-    static: {
-      directory: path.join(__dirname, "..", `${PROJECT_ENTRY}/${APP_FOLDER}`),
-      publicPath: path.join(
-        __dirname,
-        "..",
-        `${PROJECT_ENTRY}/${APP_FOLDER}/public`      
-      ),
-      watch: true,
-    }
-  },*/
  
 })

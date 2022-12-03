@@ -13,13 +13,6 @@ module.exports = {
  
   target: 'web',
   mode,
-  entry: {
-    runtimedev: path.join(__dirname, "..", "src", "runtime.js"),
-  },
-  output: {
-    filename: "[name].js",
-    path: path.join(__dirname, "..", APP_FOLDER),
-  },
   devServer: {
     hot: true,
     watchFiles: ["../src/**/**/*.php", "../public/*"],
@@ -34,6 +27,7 @@ module.exports = {
     },
     devMiddleware: {
       writeToDisk: true,
+      index:false
     },
     static: {
       directory: path.join(__dirname, "..", `${PROJECT_ENTRY}/${APP_FOLDER}`),
@@ -56,11 +50,6 @@ module.exports = {
       allowEmptyValues: true,
       expand: true,
     }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "..", "src", "pages/Homepage/index.php"),
-      filename: "index.php",
-      inject: false,
-      chunks: [null]
-    }),
+   
   ]
 };
