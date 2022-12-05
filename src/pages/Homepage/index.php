@@ -14,8 +14,6 @@
       include './navbar.php'; 
       include './homecontainer.php'; 
     ?>
-
-
   </body>
 
 </html>

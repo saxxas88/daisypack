@@ -14,7 +14,6 @@ module.exports = merge(webpackBaseConfig,  {
   target: "web",
   entry: {
     homecontainer: path.join(__dirname, "..", "src/includes/HomeContainer/HomeContainer.js"),
-    
   },
   output: {
     filename: "[name].js",
@@ -36,5 +35,6 @@ module.exports = merge(webpackBaseConfig,  {
       inject: false,
       chunks: [null]
     }),
+    
   ]
 })
