@@ -8,10 +8,9 @@ const APP_FOLDER = (mode === 'development') ?  process.env.DEV_ENTRY : process.e
 
 module.exports = merge(webpackBaseConfig,{
   name: 'navbar',
-  
   target: "web",
   entry: {
-    navbar: path.join(__dirname, "..", "src/components/Navbar/Navbar.js"),
+    navbar: path.join(__dirname, "..", "src/includes/Navbar/Navbar.js"),
   },
   output: {
     filename: "[name].js",
@@ -22,12 +21,11 @@ module.exports = merge(webpackBaseConfig,{
       filename: "[name].css"
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "..", "src", "components/Navbar/Navbar.php"),
+      template: path.join(__dirname, "..", "src", "includes/Navbar/Navbar.php"),
       filename: "navbar.php",
       inject: true,
       chunks: ['navbar']
     }),
     
-  ],
-  watch:true
+  ]
 });

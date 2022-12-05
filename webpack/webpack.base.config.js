@@ -4,7 +4,6 @@ const Dotenv = require("dotenv-webpack");
 const LiveReloadPlugin = require("webpack-livereload-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const webpack = require("webpack");
 const mode = process.env.NODE_ENV;
 
 module.exports = {
