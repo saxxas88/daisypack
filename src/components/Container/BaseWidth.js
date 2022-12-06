@@ -2,7 +2,7 @@ import React from 'react'
 
 function BaseWidth({children, ...props}) {
   return (
-    <div className="container mx-auto bg-cyan-800" {...props}>
+    <div className="container mx-auto" {...props}>
         {children}
     </div>
   )
