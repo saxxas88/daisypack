@@ -13,6 +13,7 @@
     <?php 
       include './navbar.php'; 
       include './homecontainer.php'; 
+      include './footer.php'; 
     ?>
   </body>
 

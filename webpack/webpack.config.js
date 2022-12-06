@@ -1,5 +1,5 @@
 const homepage = require("./webpack.homepage.config");
 const navbar = require("./webpack.navbar.config");
-
-module.exports = [ homepage, navbar ];
+const footer = require("./webpack.footer.config")
+module.exports = [ homepage, navbar, footer ];
 
