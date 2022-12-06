@@ -1,1 +1,1 @@
-<div id="homecontainer">x</div>
+<div id="homecontainer"></div>
