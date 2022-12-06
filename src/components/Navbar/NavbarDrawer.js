@@ -46,7 +46,7 @@ const NavbarDrawer = ({links}) => {
         </div>
       </div>
       
-        <div className="drawer-side absolute top-0 left-0 w-0 h-screen lg:-z-10">
+        <div className="drawer-side absolute top-0 left-0 w-0 h-screen z-10 lg:-z-10">
        
           <label htmlFor="my-drawer-3" className="drawer-overlay fixed top-0 left-0 w-screen h-screen z-10"></label>
           <ul className="menu p-4 w-80 bg-base-100 fixed top-0 left-0 h-screen z-10">
