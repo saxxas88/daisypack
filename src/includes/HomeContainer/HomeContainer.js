@@ -21,7 +21,7 @@ const HomeContainer = () => {
         <div className="p-4 xl:col-start-2 xl:col-span-2">
           <input type="text" placeholder="Type here" className="input w-full rounded-full shadow-lg text-orange-400 placeholder-orange-400" />
         </div>
-        <div className="p-4 xl:col-start-4 xl:col-span-2"><button className="btn w-full rounded-full shadow-lg text-orange-400 border-yellow-500 hover:border-yellow-500 bg-base-100 hover:bg-base-100">BUTTON</button></div>
+        <div className="p-4 xl:col-start-4 xl:col-span-2"><button className="btn w-full rounded-full shadow-lg text-orange-400 border-yellow-500 hover:border-yellow-500 bg-base-100 hover:bg-base-100 no-animation">BUTTON</button></div>
       </div>
     </BaseWidth>
     
