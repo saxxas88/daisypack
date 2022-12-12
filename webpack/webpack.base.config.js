@@ -5,6 +5,7 @@ const LiveReloadPlugin = require("webpack-livereload-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const mode = process.env.NODE_ENV;
+const jsConfig = require('../jsconfig.js');
 
 module.exports = {
   mode,
@@ -87,4 +88,7 @@ module.exports = {
     ],
   },
   watch: true,
+  resolve: {
+    alias: jsConfig?.paths
+  },
 };

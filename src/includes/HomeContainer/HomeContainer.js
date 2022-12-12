@@ -4,8 +4,8 @@ import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./HomeContainer.scss";
 
-import BaseWidth from "../../components/Container/BaseWidth";
-import Hero_w_OveralyImage from "../../components/Hero/Hero_w_OveralyImage";
+import BaseWidth from "Components/Container/BaseWidth";
+import Hero_w_OveralyImage from "Components/Hero/Hero_w_OveralyImage";
 
 /* Data */
 import { hero } from "../../data/homepage.data";
@@ -28,7 +28,7 @@ const HomeContainer = () => {
             <input
               type="text"
               placeholder="Type here"
-              className="input w-full rounded-full shadow-lg text-orange-400 placeholder-orange-400"
+              className="input w-full rounded-full shadow-lg text-orange-400 placeholder-orange-400 bg-gray-300"
             />
           </div>
           <div className="p-4 xl:col-start-4 xl:col-span-2">
@@ -37,15 +37,19 @@ const HomeContainer = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row">
-          {biorfarmCards &&
-            biorfarmCards?.map((el,i) => (
-              <div key={i} className="basis-1/4">
-                <BiorfarmCard />
-              </div>
-            ))}
-        </div>
       </BaseWidth>
+      <div className="py-4 bg-orange-200">
+        <BaseWidth>
+          <div className="flex flex-col md:flex-row ">
+            {biorfarmCards &&
+              biorfarmCards?.map((el, i) => (
+                <div key={i} className="basis-1/4">
+                  <BiorfarmCard />
+                </div>
+              ))}
+          </div>
+        </BaseWidth>
+      </div>
     </HelmetProvider>
   );
 };

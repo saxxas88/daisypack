@@ -2,7 +2,7 @@ import React from "react";
 
 function BiorfarmCard() {
   return (
-    <div className="card w-auto bg-base-100 shadow-xl">
+    <div className="card w-auto ">
       <figure className="px-10 pt-10">
         <img
           src="https://placeimg.com/400/225/arch"
