@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const mode = process.env.NODE_ENV;
 const jsConfig = require('../jsconfig.js');
-
+console.log(jsConfig)
 module.exports = {
   mode,
   module: {
@@ -89,6 +89,6 @@ module.exports = {
   },
   watch: true,
   resolve: {
-    alias: jsConfig?.paths
+    alias: jsConfig?.alias
   },
 };

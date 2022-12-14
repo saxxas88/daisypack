@@ -7,11 +7,11 @@ function BiorfarmCard() {
         <img
           src="https://placeimg.com/400/225/arch"
           alt="Shoes"
-          
+           
         />
       </figure>
       <div className="card-body px-2 xl:px-4 items-center text-center">
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <p>If a dog chews shoes whose shoes does he choose???</p>
         
       </div>
     </div>

@@ -8,9 +8,9 @@ import BaseWidth from "Components/Container/BaseWidth";
 import Hero_w_OveralyImage from "Components/Hero/Hero_w_OveralyImage";
 
 /* Data */
-import { hero } from "../../data/homepage.data";
-import BiorfarmCard from "../../components/Cards/BiorfarmCard";
-import { biorfarmCards } from "../../data/homepage.data";
+import { hero } from "Data/homepage.data";
+import BiorfarmCard from "Components/Cards/BiorfarmCard";
+import { biorfarmCards } from "Data/homepage.data";
 const HomeContainer = () => {
   const helmetContext = {};
   return (

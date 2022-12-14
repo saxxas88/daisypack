@@ -1,6 +1,7 @@
 const path = require('path')
 module.exports = {
-  "paths": {
-    Components: path.resolve(__dirname,'..', 'src/components/'),
+  alias: {
+    Components: path.resolve(__dirname,'.','src/components/'),
+    Data: path.resolve(__dirname,'.','src/data/'),
   }
 }
