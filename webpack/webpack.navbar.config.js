@@ -10,7 +10,7 @@ module.exports = merge(webpackBaseConfig,{
   name: 'navbar',
   target: "web",
   entry: {
-    navbar: path.join(__dirname, "..", "src/includes/Navbar/Navbar.js"),
+    navbar: path.join(__dirname, "..", "src/includes/Navbar/Navbar.js")
   },
   output: {
     filename: "[name].js",

@@ -14,6 +14,12 @@ module.exports = merge(webpackBaseConfig,  {
   target: "web",
   entry: {
     homecontainer: path.join(__dirname, "..", "src/includes/HomeContainer/HomeContainer.js"),
+     /*
+    styles: [
+      path.resolve(__dirname, '../src/includes/Navbar/nav1.scss'),
+      path.resolve(__dirname, '../src/includes/Navbar/nav2.scss'),
+    ]
+    */
   },
   output: {
     filename: "[name].js",
